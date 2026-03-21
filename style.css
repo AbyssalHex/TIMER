@@ -1,0 +1,162 @@
+/* --- Color Palette from your image --- */
+:root {
+    --bg-light-gray: #D7D7D7;
+    --dark-blue-gray: #4C5B6F;
+    --vibrant-yellow: #F0CC0A;
+    --vibrant-orange: #EB6B20;
+    --aqua-teal: #49CEDC;
+    --darkest-accent: #2A384A;
+}
+
+/* --- General Styling & New Background --- */
+body {
+    background-color: black; /* CHANGED: Background is now black */
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: var(--bg-light-gray);
+    background-image: url(".\\SITE ON SIGHT.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+/* --- Main Timer Container (Now in a Dark Blue/Gray) --- */
+.minecraft-container {
+    background-color: var(--dark-blue-gray);
+    padding: 30px 40px;
+    border: 8px solid var(--darkest-accent);
+    box-shadow: 0 0 20px rgba(0,0,0,0.5), inset 0 0 15px rgba(0,0,0,0.4);
+    text-align: center;
+    width: 90%;
+    max-width: 750px;
+}
+
+/* --- VibeCraft Title Styling (Yellow with Darker Shadow) --- */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--vibrant-yellow);
+    text-shadow: 4px 4px 0px var(--darkest-accent);
+}
+
+/* --- Timer Display Styling (Darker Blue/Gray screen) --- */
+#timer-display {
+    font-size: 3.5rem;
+    background-color: var(--darkest-accent);
+    padding: 20px 10px;
+    margin: 20px 0;
+    border: 6px solid var(--dark-blue-gray);
+    box-shadow: inset 0 0 10px #000000;
+    letter-spacing: 2px;
+    color: var(--bg-light-gray);
+    min-width: 250px;
+}
+
+/* --- Input Fields Styling --- */
+.time-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.time-inputs input {
+    width: 80px;
+    padding: 10px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+    text-align: center;
+    background-color: var(--darkest-accent);
+    border: 4px solid var(--dark-blue-gray);
+    color: var(--bg-light-gray);
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+.time-inputs input::-webkit-outer-spin-button,
+.time-inputs input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* --- Control Buttons Styling (Aqua/Teal Buttons) --- */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.controls button {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+    padding: 15px 25px;
+    cursor: pointer;
+    color: var(--darkest-accent);
+    background-color: var(--aqua-teal);
+    border-style: solid;
+    border-width: 4px;
+    border-color: #79E8F5 #35A3AD #35A3AD #79E8F5;
+    box-shadow: 2px 2px 0px var(--darkest-accent);
+    transition: all 0.05s ease-in-out;
+}
+
+.controls button:active {
+    border-color: #35A3AD #79E8F5 #79E8F5 #35A3AD;
+    transform: translate(2px, 2px);
+    box-shadow: none;
+}
+
+/* --- Responsive Design for smaller screens --- */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    #timer-display {
+        font-size: 2.5rem;
+        min-width: unset;
+    }
+    .controls {
+        flex-direction: column;
+    }
+    .minecraft-container {
+        padding: 20px;
+    }
+}
+
+.canvas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sponsorship-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    width: 30vw;
+    gap: 15px;
+}
+
+.sponsorship-container img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 6px solid var(--darkest-accent);
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.tagline {
+    background-color: var(--dark-blue-gray);
+    padding: 15px 20px;
+    border: 6px solid var(--darkest-accent);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    text-align: center;
+    font-size: 0.8rem;
+    max-width: 250px;
+    line-height: 1.5;
+}
