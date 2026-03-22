@@ -22,7 +22,6 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    pointer-events: none;
 }
 
 /* --- Main Timer Container (Now in a Dark Blue/Gray) --- */
